@@ -1,0 +1,175 @@
+# ----------------------------------------------------------------------------------------------------------------------------------
+# D. Cordier -- Institut UTINAM, Besançon, 13 novembre 2013 
+# Database of interaction parameters "K_ij" used in PC-SAFT theory.
+# ----------------------------------------------------------------------------------------------------------------------------------
+# 
+# ----------------------------------------------------------------------------------------------------------------------------------
+# On commence par les couples d'espces n'ayant pas un 'kij' qui dpend de la temprature (coefficient 'b' valant zro), on lit
+# la Table 3 de Tan et al. (2013) par colonne. Ces valeurs sont celles apparaissant en roman (ie par en italique) dans la table,
+# ceci ventuellement entre parenthses.
+# Comp. 1      | Comp. 2      |      a    |      b    | Comment
+N2             CH4                 0.0300      0.0000  Tan et al. (2013)
+#N2             CH4                 0.0000      0.0000  Test pour alcanofère
+# Maintenant ceux que j'ajoute pour calculer la dissolution des solides :
+N2             HCN                  0.0000      0.0000   Moi
+N2             C4H10                0.0000      0.0000   Moi
+N2             CH3CN                0.0000      0.0000   Moi
+N2             CO2                  0.0000      0.0000   Moi
+#N2             CO2                  0.8000      0.0000   Moi
+#N2             CO2                  0.6000      0.0000   Moi
+#N2             CO2                 -0.0200      0.0000   Moi
+N2             C6H6                 0.0000      0.0000   Moi
+#
+CO             N2                   0.0080      0.0000  Tan et al. (2013)
+#
+Ar             CO                   0.0000      0.0000  Tan et al. (2013)
+Ar             H2                  -0.1530      0.0000  Tan et al. (2013)
+#
+C2H6           N2                   0.0400      0.0000  Tan et al. (2013)
+#C2H6           N2                   0.0000      0.0000  Valeur de test pour l'influence de PC-SAFT sur le gradient de l'alcanofère
+#C2H6           N2                   0.0400      0.0000  Tan et al. (2013)
+#C2H6           N2                   0.0600      0.0000  Dt. le 13 mars 2017  partir des donnes de Malaska et al. (2017).
+#C2H6           N2                   0.0700      0.0000  Valeur de travail pur TiLSS, 6 Nov. 2018, JPL.
+#
+#
+#C2H6           N2                   0.0500      0.0000  Moi en fittant les donnes de Gabis (1991) fournies par Glein & Shock (2013)
+C2H6           CH4                  0.0000      0.0000  Tan et al. (2013)
+C2H6           CO                   0.0100      0.0000  Tan et al. (2013)
+# Maintenant ceux que j'ajoute pour calculer la dissolution des solides :
+C2H6           HCN                  0.0000      0.0000   Moi
+C2H6           C4H10                0.0000      0.0000   Moi
+C2H6           CH3CN                0.0000      0.0000   Moi
+C2H6           CO2                  0.1300      0.0000   Moi
+C2H6           C6H6                -0.1388     15.0699   Moi: ajuste pour fitter la valeur de Diez-y-Riega et al. (2014)
+#
+C2H2           N2                   0.0800      0.0000  Tan et al. (2013)
+#C2H2           CH4                  0.1000      0.0000  Tan et al. (2013)
+C2H2           CH4                  0.1150      0.0000  Cordier, juillet 2014, par comparaison avec les data exp. de Neumann & Mann (1969)
+#C2H2           CH4                 -0.0735      0.0000  
+#C2H2           CH4                 -0.0805      0.0000  Test pour Sunny (24/08/2015) 
+C2H2           CO                   0.0400      0.0000  Tan et al. (2013)
+C2H2           C2H6                 0.1050      0.0000  Tan et al. (2013)
+#C2H2           C2H6                -0.1500      0.0000  Test pour Sunny (24/08/2015)
+#
+C3H8           N2                   0.0730      0.0000  Tan et al. (2013)
+C3H8           CH4                  0.0000      0.0000  Tan et al. (2013)
+C3H8           C2H6                 0.0050      0.0000  Tan et al. (2013)
+C3H8           C2H2                 0.1000      0.0000  Tan et al. (2013)
+#
+C2H4           N2                   0.0620      0.0000  Tan et al. (2013)
+C2H4           CH4                  0.0120      0.0000  Tan et al. (2013)
+#C2H4           CH4                  0.0000      0.0000  Test pour Ellen Czaplinski (Arkansas), 27/01/2020
+#C2H4           CH4                 -0.0340      0.0000  Test pour calculs pour Sunny (24/08/2015).
+C2H4           CO                   0.0200      0.0000  Tan et al. (2013)
+#C2H4           Ar                   0.0000      0.0000  Tan et al. (2013)
+#C2H4           Ar                   0.1500      0.0000   pour le travail avec Carlos Manzanares
+C2H4           Ar                   0.1970      0.0000   pour le travail avec Carlos Manzanares
+C2H4           C2H6                 0.0100      0.0000  Tan et al. (2013)
+#C2H4           C2H6                 0.0450      0.0000  Test pour Ellen Czaplinski (Arkansas), 27/01/2020
+#C2H4           C2H6                 0.0120      0.0000  Test pour Sunny (24/08/2015).
+C2H4           C2H2                 0.0450      0.0000  Tan et al. (2013)
+C2H4           C3H8                 0.0200      0.0000  Tan et al. (2013)
+#
+# ----------------------------------------------------------------------------------------------------------------------------------
+# Paramtre d'interaction des soluts avec C3H8 (11/12/2014) :
+C3H8           HCN                  0.0000      0.0000  Moi : supposition
+C3H8           C4H10                0.0000      0.0000  Moi : supposition
+C3H8           CH3CN                0.0000      0.0000  Moi : supposition
+C3H8           CO2                  0.0000      0.0000  Moi : supposition
+C3H8           C6H6                 0.0000      0.0000  Moi : supposition
+#
+# ----------------------------------------------------------------------------------------------------------------------------------
+# On passe aux couples d'espces ayant un 'kij' ayant une dpendance avec T, on lit toujours la Table 3 de Tan et al. (2013) par
+# colonne. Les "a" sont les valeurs au-dessus de la diagonnale, en italique et soulignes; les "b" sont en dessous de la diagonnale,
+# en italique.
+# Comp. 1      | Comp. 2      |      a    |      b    | Comment
+N2             H2                   0.2894    -48.0300  Tan et al. (2013)
+N2             Ar                   0.0152     -1.8100  Tan et al. (2013)
+#
+CH4            H2                   0.1700    -24.6100  Tan et al. (2013)
+CH4            CO                   0.0300     -1.2240  Tan et al. (2013)
+CH4            Ar                   0.0527     -2.5000  Tan et al. (2013)
+# Maintenant ceux que j'ajoute pour calculer la dissolution des solides :
+CH4            HCN                  0.0000      0.0000   Moi
+CH4            C4H10                0.0220      0.0000   Gross & Sadowski (2001)
+CH4            CH3CN                0.0000      0.0000   Moi
+#CH4            CO2                  0.0650      0.0000   Gross & Sadowski (2001)
+CH4            CO2                  0.0850      0.0000   Moi
+CH4            C6H6                 0.0370      0.0000   Gross & Sadowski (2001)
+#CH4            C6H6                 0.0000      0.0000   TEST
+#
+H2             CO                   0.1066    -24.4400  Tan et al. (2013)
+H2             C2H6                 0.1212     -9.8300  Tan et al. (2013)
+H2             C2H2                 0.2070    -17.0500  Tan et al. (2013)
+H2             C3H8                 0.0857     -5.5900  Tan et al. (2013)
+H2             C2H4                 0.1641    -13.4400  Tan et al. (2013)
+#
+CO             C3H8                 0.0649     -0.9300  Tan et al. (2013)
+#
+Ar             C2H6                 0.0162      2.5500  Tan et al. (2013)
+Ar             C2H2                -0.0160     -2.5500  Tan et al. (2013)
+Ar             C3H8                 0.0150      2.5200  Tan et al. (2013)
+# ----------------------------------------------------------------------------------------------------------------------------------
+# Données de Kr et Xe ajoutées le 18/11/2020 pour l'article sur l'alcanofère :
+Kr             N2                   0.0000      0.0000  DC 18/11/2020 - Dans l'ignorance du kij
+Kr             CH4                  0.0000      0.0000  DC 18/11/2020 - Dans l'ignorance du kij
+Kr             C2H6                 0.0000      0.0000  DC 18/11/2020 - Dans l'ignorance du kij
+Xe             N2                   0.0000      0.0000  DC 18/11/2020 - Dans l'ignorance du kij
+Xe             CH4                  0.0000      0.0000  DC 18/11/2020 - Dans l'ignorance du kij
+Xe             C2H6                 0.0000      0.0000  DC 18/11/2020 - Dans l'ignorance du kij
+#
+# ----------------------------------------------------------------------------------------------------------------------------------
+# On passe aux couples d'espces ayant un 'kij' dans le Maity (2003)
+# Comp. 1      | Comp. 2      |      a    |      b    | Comment
+n-octadecane   n-heptane            0.0003      0.0000  Maity (2003) p. 38.
+n-dotriacontanen-heptane            0.0004      0.0000  Maity (2003) p. 39.
+biphenyl       benzene              0.0000      0.0000  Maity (2003) p. 40.
+e-caprolactone toluene              0.0000      0.0000  Maity (2003) p. 41.
+#
+# **********************************************************************************************************************************
+# Maintenant ceux que j'ajoute pour calculer la dissolution des solides :
+HCN            C4H10                0.0000      0.0000   Moi
+HCN            C6H6                 0.0000      0.0000   Moi
+HCN            C2H2                 0.0000      0.0000   Moi
+HCN            CH3CN                0.0000      0.0000   Moi
+HCN            CO2                  0.0000      0.0000   Moi
+#
+C4H10          C2H2                 0.0000      0.0000   Moi
+C4H10          CH3CN                0.0000      0.0000   Moi
+C4H10          CO2                  0.0000      0.0000   Moi
+C4H10          C6H6                 0.0000      0.0000   Moi
+#
+C2H2           CH3CN                0.0000      0.0000   Moi
+C2H2           CO2                  0.0000      0.0000   Moi
+C2H2           C6H6                 0.0000      0.0000   Moi
+#
+CH3CN          CO2                  0.0000      0.0000   Moi
+CH3CN          C6H6                 0.0000      0.0000   Moi
+#
+CO2            C6H6                 0.0000      0.0000   Moi
+#
+naphthalene    CH4                  0.0000      0.0000   Moi
+naphthalene    C2H6                -0.0494      0.0000   Moi
+naphthalene    N2                   0.0000      0.0000   Moi
+#
+biphenyl       CH4                  0.0000      0.0000   Moi
+biphenyl       C2H6                -0.0030      0.0000   Moi
+biphenyl       N2                   0.0000      0.0000   Moi
+#
+# **********************************************************************************************************************************
+# Cas de l'eau :
+H2O            CH4                  0.0000      0.0000   Moi
+H2O            C2H6                 0.0000      0.0000   Moi
+H2O            N2                   0.0000      0.0000   Moi
+#
+# **********************************************************************************************************************************
+# Espces ajoues pour le travail sur l'absorption vers 2.4 microns dans l'atmosphre de Titan (10 mai 2016) :
+C6H12          N2                   0.0000      0.0000   Moi
+n-pentane      N2                   0.0000      0.0000   Moi
+#
+# **********************************************************************************************************************************
+# Espces ajoues pour le travail avec Carlos Manzanares (14 juin 2016) :
+propyne        Ar                   0.1430      0.0000   Det. pour travail avec C. Manzanares 20/02/2017
+2methyl2butene Ar                   0.1187      0.0000   Moi
+2m13butadiene  Ar                   0.0960      0.0000   Moi
+

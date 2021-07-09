@@ -1,0 +1,83 @@
+# ----------------------------------------------------------------------------------------------------------------------------------
+# D. Cordier -- Institut UTINAM, Besançon, 1er novembre 2013 
+# Database of parameters used in PC-SAFT theory.
+# ----------------------------------------------------------------------------------------------------------------------------------
+# 
+# Comp         |   Molar mass   | Num. seg. | Seg. diam.  | Seg. engergy | Ref.
+#              |   (kg.mol^-1)  |    "m"    | "sig" (Ang) | e/kB (K)     | 
+N2                  28.01340E-03      1.2414        3.2992        89.2230   NIST Used by Tan et al. (2013)
+CH4                 16.04250E-03      1.0000        3.7039       150.0300   NIST Used by Tan et al. (2013), repris sur G&S (2001) qui eux mêmes ...
+H2                   2.01588E-03      1.0000        2.9860        19.2775   -    Used by Tan et al. (2013)
+CO                  28.01010E-03      1.3680        3.2035        89.4037   NIST Used by Tan et al. (2013)
+#CO                  28.01010E-03      1.3097        3.2507        92.1500   Gross & Sadowski (2001) qui reprennent ... cf. leur papier.
+Ar                  39.94800E-03      1.0000        3.3768       117.8538   NIST Used by Tan et al. (2013)
+#Ar                  39.94800E-03      0.9200        3.4784       122.2300   Gross & Sadowski (2001) qui reprennent ... cf. leur papier.
+C2H6                30.06900E-03      1.6114        3.5245       190.9926   NIST Used by Tan et al. (2013)
+#C2H6                30.06900E-03      1.6069        3.5206       191.4200   Gross & Sadowski (2001) qui reprennent ... cf. leur papier.
+C2H2                26.03730E-03      2.1569        2.9064       168.5506   Din (1962) Used by Tan et al. (2013)
+C3H8                44.09560E-03      2.0022        3.6209       207.7721   NIST Used by Tan et al. (2013)
+C2H4                28.05320E-03      1.6018        3.4029       176.5698   NIST Used by Tan et al. (2013)
+#
+#HCN                 27.02530E-03      1.3320        3.1890       259.1600   Formules p. 118 thèse Belkadi (2008)
+HCN                 27.02530E-03      2.4340        3.2929       248.4800   Moi, Cordier et al. (2014 ou 2015)
+#
+#
+#C4H10               58.12220E-03      8.0000        3.5100       190.9000   TEST TEST
+#
+#
+C4H10               58.12220E-03      2.6300        3.5100       190.9000   Tab. III-1 p. 76 de Belkadi (2008), repris sur Tamouza et al. (2004)
+#C4H10               58.12220E-03      2.3316        3.7086       222.8800   Gross & Sadowski (2001) qui reprennent ... cf. leur papier.
+#CH3CN               41.05190E-03      1.4500        3.7000       268.0000   Belkadi (2008), Tab. V-4 p. 117
+CH3CN               41.05190E-03      2.2661        3.3587       313.0400   Spuhl et al. (2004)
+C6H6                78.11180E-03      2.4653        3.6478       287.3500   Maity (2003), Tab. 5.1 p. 35, qui reprend Gross & Sadowski (2001) qui reprennent eux mêmes ...
+CO2                 44.00950E-03      2.0729        2.7852       169.2100   Gross & Sadowski (2001) qui reprennent ... cf. leur papier.
+#
+C6H12               84.14700E-03      2.5303        3.8499       278.1100   Gross & Sadowski (2001) qui reprennent ... cf. leur papier.
+# ----------------------------------------------------------------------------------------------------------------------------------
+# Dans la suite : Table 5.1 p. 35 de Maity (2003) en vue des tests de validation sur les données expérimentales utilisées par
+#                 Maity (2003).
+#
+#              |   (kg.mol^-1)  |    "m"    | "sig" (Ang) | e/kB (K)     | 
+# ------- Solutes ---------
+n-dodecane         170.33480E-03      5.3060        3.8959        249.210   Maity (2003)
+n-hexadecane       226.44000E-03      6.6485        3.9592        254.700   Maity (2003)
+n-octadecane       254.49430E-03      7.3271        3.9668        256.200   Maity (2003)
+n-octacosane       394.76010E-03     10.3622        4.0217        252.000   Maity (2003)
+n-dotriacontane    450.86640E-03     11.8350        4.0217        252.000   Maity (2003)
+biphenyl           154.20780E-03      3.8877        3.8151        227.420   Maity (2003)
+e-caprolactone     114.14240E-03      2.8149        3.9902        255.050   Maity (2003)
+# ------- Solvents ---------
+n-pentane           72.14880E-03      2.6896        3.7729        231.200   Maity (2003)
+n-heptane          100.20190E-03      3.4831        3.8049        238.400   Maity (2003)
+n-decane           142.28170E-03      4.6627        3.8384        243.870   Maity (2003)
+# Rq. : il y a déjà le benzene au-dessus sous le nom C6H6 ---
+benzene             78.11180E-03      2.4653        3.6478        287.35    Maity (2003)
+toluene             92.13840E-03      2.8149        3.7169        285.69    Maity (2003)
+#
+# ----------------------------------------------------------------------------------------------------------------------------------
+# Collectées pour écrire des papiers :
+# 
+# Comp         |   Molar mass   | Num. seg. | Seg. diam.  | Seg. engergy | Ref.
+#              |   (kg.mol^-1)  |    "m"    | "sig" (Ang) | e/kB (K)     | 
+naphthalene        128.17000E-03      3.0915        3.8333       348.4000   Ting, P.D., PhD, Rice University (2003). 
+#
+# ----------------------------------------------------------------------------------------------------------------------------------
+# Cas de l'eau 
+# 
+# Comp         |   Molar mass   | Num. seg. | Seg. diam.  | Seg. engergy | Asso? | Ass. energy  | Vol. asso    | Ref.
+#              |   (kg.mol^-1)  |    "m"    | "sig" (Ang) | e/kB (K)     |   0/1 | e_ass/kB (K) | kappa (AA^3) |
+H2O                 18.01528E-03      2.6500        2.0700       151.3000       1      1515.0000         0.4320 Belkadi p. 81
+#
+# ----------------------------------------------------------------------------------------------------------------------------------
+# Pour faire des tests de calcul de Cp :
+# Comp         |   Molar mass   | Num. seg. | Seg. diam.  | Seg. engergy | Asso? | Ass. energy  | Vol. asso    | Ref.
+#              |   (kg.mol^-1)  |    "m"    | "sig" (Ang) | e/kB (K)     |   0/1 | e_ass/kB (K) | kappa (AA^3) |
+octane             114.23100E-03      3.8176        3.8373       242.7800       0         0.0000         0.0000 Gross & Sadowski (2001) Tab. 2 p. 1248
+#
+# ----------------------------------------------------------------------------------------------------------------------------------
+# 14 juin 2016 : estimations faites avec la méthode de "Group Contributions" de Tihic et al. (2008) pour les calculs faits pour Carlos Manzanares
+# Comp         |   Molar mass   | Num. seg. | Seg. diam.  | Seg. engergy | Asso? | Ass. energy  | Vol. asso    | Ref.
+#              |   (kg.mol^-1)  |    "m"    | "sig" (Ang) | e/kB (K)     |   0/1 | e_ass/kB (K) | kappa (AA^3) |
+propyne             40.06390E-03      1.8167        3.4710       229.6611       0         0.0000         0.0000 Mon estimation thèse Tihic (different du papier, plus de choses)
+2methyl2butene      70.13300E-03      2.4470        3.7800       243.8960       0         0.0000         0.0000 Mon estimation à partir de la GC de Tihic et al. (2008)
+2m13butadiene       68.11700E-03      2.4160        3.7470       242.1880       0         0.0000         0.0000 Mon estimation à partir de la GC de Tihic et al. (2008)
