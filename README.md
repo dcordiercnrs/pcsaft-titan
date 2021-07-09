@@ -32,7 +32,7 @@ The PC-SAFT implementation available here has been already use in the following 
 
 There are two options:
 - Click on the <font color="#008000">**`Code`**</font> green button (top right of this web page) and download the ZIP archive.
-- in a terminal type: `git clone https://github.com/dcordiercnrs/pcsaft.git`
+- in a terminal type: `git clone https://github.com/dcordiercnrs/pcsaft-titan.git`
 
 ---
 # Requirements
