@@ -34,7 +34,7 @@ For those who just want make a very quick test, the best solution is probably to
 using [Docker](https://www.docker.com) (see also the [Wikepedia page](https://en.wikipedia.org/wiki/Docker_(software))) which can be installed on your
 computer by downloading the appropriate version [here](https://docs.docker.com/get-docker/) dedicated to your OS.
 
- 1. download the file **Dockerfile** in your work directory.
+ 1. download the file called "**Dockerfile**" in your work directory.
  2. build the Linux virtual machine image: <<**`docker build -t dock-pcsaft .`**>> (`dock-pcsaft` is the name given to the image, `.` tells to docker it has to find the Dockerfile
     in the current directory).
  3. run the virtual machine: <<**`docker run --rm --name buster-pcsaft-titan -v $(pwd):/home -it dock-pcsaft:latest /bin/bash`**>>
