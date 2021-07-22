@@ -70,6 +70,7 @@ A easy use of the programs  available here requires:
 
  + **Bonus**
    - **binaire_diag_N2CH4.ipynb**: a `Python Jupyter Notebook` to plot binary diagram, uses data in **DATA_EXPERIMENTAL/** and examples of simulation results stored in **BINARY_RESULTS_EXAMPLES/**. With this `notebook` the user can rebuild the binary diagram presented above in this webpage.
+   - **Dockerfile**: Docker configuration file, allow to build a small virtual Linux machine with all the required tools to compile and run the programs available in this repository. 
    
 ---
 # Compilation
