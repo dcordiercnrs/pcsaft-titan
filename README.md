@@ -52,7 +52,7 @@ There are two options:
 - in a terminal type: `git clone https://github.com/dcordiercnrs/pcsaft-titan.git`
 
 Alternative:
-- click on the big green button **Code** (top of this page) an choose **Download ZIP**
+- click on the big green button "**Code**" (top of this page) an choose "**Download ZIP**"
 
 ---
 # Requirements
