@@ -30,13 +30,19 @@ The PC-SAFT implementation available here has been already use in the following 
 ---
 # Quick start with Docker
 
-For those who just want make a very quick test, the best solution is probably to run the programs in a tiny virtual machine which can be set up
+For those who just want make a very quick test, the best solution is probably to run the programs in a tiny virtual Linux/Debian machine which can be set up
 using [Docker](https://www.docker.com) (see also the [Wikepedia page](https://en.wikipedia.org/wiki/Docker_(software))) which can be installed on your
 computer by downloading the appropriate version [here](https://docs.docker.com/get-docker/) dedicated to your OS.
 
  1. download the file **Dockerfile** in your work directory.
  2. build the Linux virtual machine image: <<**`docker build -t dock-pcsaft .`**>> (`dock-pcsaft` is the name given to the image, `.` tells to docker it has to find the Dockerfile
     in the current directory).
+ 3. run the virtual machine: <<**`docker run --rm --name buster-pcsaft-titan -v $(pwd):/home -it dock-pcsaft:latest /bin/bash`**>>
+ 4. now you should be in the virtual environment, sharing the directory **/home** with the work directory from which you launch the virtual machine.
+ 5. dowload PCSAFT-TITAN: <<**`git clone https://github.com/dcordiercnrs/pcsaft-titan.git`**>>
+ 6. move to **pcsaft-titan/** directory: <<**`cd pcsaft-titan`**>>
+ 7. compile the program: <<**`make`**>>
+ 8. now you can run an demo program: <<**`./pcsaft_demo`**>> or <<**`./binary_N2CH4_demo`**>> 
 
 ---
 # How to get the files
