@@ -28,6 +28,13 @@ The PC-SAFT implementation available here has been already use in the following 
 - Please refer to Cordier **Cordier *et al*. (2021)** mentioned above or **Cordier *et al*. (2017) [10.1038/s41550-017-0102](https://doi.org/10.1038/s41550-017-0102)**
 
 ---
+# Quick start with Docker
+
+For those who just want make a very quick test, the best solution is probably to run the programs in a tiny virtual machine which can be set up
+using [Docker](https://www.docker.com) (see also the [Wikepedia page](https://en.wikipedia.org/wiki/Docker_(software))) which can be installed on your
+computer by downloading the appropriate version [here](https://docs.docker.com/get-docker/) dedicated to your OS.
+
+---
 # How to get the files
 
 There are two options:
