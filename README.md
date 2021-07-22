@@ -20,7 +20,7 @@ The PC-SAFT implementation available here has been already use in the following 
 * Cordier, D., & Carrasco, N., *The floatability of aerosols and waves damping on Titan's seas*,
        2019, *Nature Geoscience*, 12, 315-320. [10.1038/s41561-019-0344-4](https://doi.org/10.1038/s41561-019-0344-4)
 * Cordier, D., Bonhommeau, D., Vu, T., Choukroun, M., Garcia-Sanchez, F. *Vertical compositional variations of liquid hydrocarbons in Titan's alkanofers*,
-        2021, *A&A*, in press.
+        2021, *A&A*, in press. Already available on Arxiv here: [https://arxiv.org/abs/2107.06348](https://arxiv.org/abs/2107.06348).
 
 ---
 # How to cite this program
