@@ -35,7 +35,7 @@ using [Docker](https://www.docker.com) (see also the [Wikepedia page](https://en
 computer by downloading the appropriate version [here](https://docs.docker.com/get-docker/) dedicated to your OS.
 
  1. download the file **Dockerfile** in your work directory.
- 2. build the Linux virtual machine image: `docker build -t dock-pcsaft .` (`dock-pcsaft` is the name given to the image, `.` tells to docker it has to find the Dockerfile
+ 2. build the Linux virtual machine image: <<**`docker build -t dock-pcsaft .`**>> (`dock-pcsaft` is the name given to the image, `.` tells to docker it has to find the Dockerfile
     in the current directory).
 
 ---
