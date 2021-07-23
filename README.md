@@ -9,7 +9,7 @@ The PC-SAFT implementation available here has been already use in the following 
 
 * Cordier, D., Cornet, T., Barnes, J. W., MacKenzie, S. M, Le Bahers, T., Nna Mvondo, D., Rannou, P., Ferreira, A. G., *Structure of Titan's evaporites*,
       2016, *Icarus*, 270, 41-56. [10.1016/j.icarus.2015.12.034](https://doi.org/10.1016/j.icarus.2015.12.034)
-* Cordier, D., *How speed of sound measurements could bring constraints on the composition of Titan's seas*, 
+* Cordier, D., *How speed of sound measurements could bring constraints on the composition of Titan's seas*,
       2016, *Monthly Notices of the Royal Astronomical Society*, 459, 2008-2013. [10.1093/mnras/stw732](https://doi.org/10.1093/mnras/stw732)
 * Cordier, D., Garcia-Sanchez, F., Justo-Garcia, D. N., Liger-Belair, G., *Bubble streams in Titan's seas as product of liquid N_2-CH_4-C_2H_6 cryogenic mixture*,
        2017, *Nature Astronomy*, 1, 102. [10.1038/s41550-017-0102](https://doi.org/10.1038/s41550-017-0102)
@@ -28,21 +28,30 @@ The PC-SAFT implementation available here has been already use in the following 
 - Please refer to Cordier **Cordier *et al*. (2021)** mentioned above or **Cordier *et al*. (2017) [10.1038/s41550-017-0102](https://doi.org/10.1038/s41550-017-0102)**
 
 ---
-# Quick start with Docker
+# Docker usage
 
-For those who just want make a very quick test, the best solution is probably to run the programs in a tiny virtual Linux/Debian machine which can be set up
-using [Docker](https://www.docker.com) (see also the [Wikepedia page](https://en.wikipedia.org/wiki/Docker_(software))) which can be installed on your
-computer by downloading the appropriate version [here](https://docs.docker.com/get-docker/) dedicated to your OS.
+This tool can be used in a Docker container. You need to have [Docker installed on your local machine](https://docs.docker.com/get-docker/), then you can run the following command to pull and start the PCSAFT image:
 
- 1. download the file called "**Dockerfile**" in your work directory.
- 2. build the Linux virtual machine image: <<**`docker build -t dock-pcsaft .`**>> (<<`dock-pcsaft`>> is the name given to the image, <<`.`>> tells to docker it has to find the Dockerfile
-    in the current directory).
- 3. run the virtual machine: <<**`docker run --rm --name buster-pcsaft-titan -v $(pwd):/home -it dock-pcsaft:latest /bin/bash`**>>
- 4. now you should be in the virtual environment, sharing the directory **/home** with the work directory from which you launch the virtual machine.
- 5. dowload PCSAFT-TITAN: <<**`git clone https://github.com/dcordiercnrs/pcsaft-titan.git`**>>
- 6. move to **pcsaft-titan/** directory: <<**`cd pcsaft-titan`**>>
- 7. compile the program: <<**`make`**>>
- 8. now you can run an demo program: <<**`./pcsaft_demo`**>> or <<**`./binary_N2CH4_demo`**>> 
+```bash
+docker run --rm -it -v </PATH/TO/DATABASE_PCSAFT>:/data/DATABASE_PCSAFT dcordiercnrs/pcsaft-titan
+```
+
+__Note:__ You need to change the `</PATH/TO/DATABASE_PCSAFT>` value for the correct `DATABASE_PCSAFT` folder on your computer.
+
+When inside the image you can execute 2 demos programs (available in the user `PATH`):
+```bash
+# Example of PC-SAFT usage
+pcsaft_demo
+```
+
+and/or
+
+```bash
+# Simulation of a liquid-vapor equilibrium for the binary mixture N2-CH4
+binary_N2CH4_demo
+```
+
+_more details about these programs are available below_.
 
 ---
 # How to get the files
@@ -61,7 +70,7 @@ A easy use of the programs  available here requires:
  - a modern `FORTRAN` compiler like [**`gfortran` version 8.3.0**](https://gcc.gnu.org/wiki/GFortran)
  - the compilation tool [**`make`**](https://www.gnu.org/software/make/)
  - **optionally** the versioning tool [**`git`**](https://git-scm.com/)
- 
+
 ---
 # Files description
 
@@ -71,11 +80,11 @@ A easy use of the programs  available here requires:
    - **COMPOUNDS_DATA_PC-SAFT_withASSO.data**: parameters for PC-SAFT version including association terms, not functional for the moment, present just for furture development.
 
  + **Data files** found in the directory **'DATA_EXPERIMENTAL/'**: experimental measurement to make comparison plots with PC-SAFT outputs.
-   
+
  + **Main programs**
    - **pcsaft_demo.f08**: provides some example of PC-SAFT use.
    - **binary_N2CH4_demo.f08**: demo program to simulate a liquid-vapor equilibrium for the binary mixture N2-CH4.
- 
+
  + **FORTRAN modules**
    - **utils_dc.f08**: contains general parameters and utilities
    - **foul.f90**: (*FOUL: The Fortran Output Library*) FORTRAN module written by Philipp Emanuel Weidmann provides a lot of cool and useful stuff like text outputs colorization, timer, etc.
@@ -83,14 +92,14 @@ A easy use of the programs  available here requires:
 
  + **Bonus**
    - **binaire_diag_N2CH4.ipynb**: a `Python Jupyter Notebook` to plot binary diagram, uses data in **DATA_EXPERIMENTAL/** and examples of simulation results stored in **BINARY_SYSTEMS_RESULTS_EXAMPLES/**. With this `notebook` the user can rebuild the binary diagram presented above in this webpage.
-   - **Dockerfile**: Docker configuration file, allow to build a small virtual Linux machine with all the required tools to compile and run the programs available in this repository. 
-   
+   - **Dockerfile**: Docker configuration file, allow to build a small virtual Linux machine with all the required tools to compile and run the programs available in this repository.
+
 If you have a FORTRAN compiler on your machine, and you know how to modify a **Makefile**, you can proceed following the procedure detailled below.
 
 ---
 # Compilation
 
-+ Edit the **Makefile** an specify your FORTRAN compiler and required options, the present code has been compiled with the GNU compiler [**`gfortran` version 8.3.0**](https://gcc.gnu.org/wiki/GFortran) using the [Debian Buster OS <img width="20" height="20" hspace="0" src="fig/debian_logo.png" alt="Debian logo"> ](https://www.debian.org/releases/buster/) 
++ Edit the **Makefile** an specify your FORTRAN compiler and required options, the present code has been compiled with the GNU compiler [**`gfortran` version 8.3.0**](https://gcc.gnu.org/wiki/GFortran) using the [Debian Buster OS <img width="20" height="20" hspace="0" src="fig/debian_logo.png" alt="Debian logo"> ](https://www.debian.org/releases/buster/)
 + in the terminal just type **make** and you should get two executable files respectively called **pcsaft_demo** and **binary_N2CH4_demo**
 + in the terminal type **./pcsaft_demo** to run the demo program.
 + in the terminal type **./binary_N2CH4_demo** to run the N2-CH4 liquid-vapor simulation program.
@@ -103,7 +112,7 @@ If you have a FORTRAN compiler on your machine, and you know how to modify a **M
   - run the program `./pcsaft_demo`
   - read the results in the standard outputs.
   - parameter values can be changed in the source code itself.
-  
+
 + Simulations of a liquid-vapor equilibrium for the binary system N2-CH4 under cryogenic conditions with **binary_N2CH4_demo.f08**:
   - compile the programs with `make`
   - run the program `./binary_N2CH4_demo`
@@ -112,7 +121,7 @@ If you have a FORTRAN compiler on your machine, and you know how to modify a **M
     - parameters, like temperature of the system, can be changed in the source code itself.
     - PC-SAFT parameters can be adjusted in data files contained in the directory **DATABASE_PCSAFT/**
     - results produced by this program can be compared to laboratory measurements available under the form of text files in the directory **DATA_EXPERIMENTAL/**
-    
+
 ---
 # How to add new species or remove species
 
@@ -121,4 +130,3 @@ To add a new species is relatively simple, a 2 steps procedure has to be followe
   2. add corresponding new lines (more than just one should be required if the user wants to consider the interactions of the added species with many other species, in the file **`DATABASE_PCSAFT/COMPOUNDS_DATA_PC-SAFT-PARAM_INTERAC.data`**
 
 To remove a species (useful only if one wants to test a new set of parameters, the line of standard value is put in comment by writting a "#" at the beginning of the line) needs only to comment the line with a "#"
-
